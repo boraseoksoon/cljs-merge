@@ -1,12 +1,40 @@
 {
   "name": "cljs-merge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "'cljs-merge' recursively merges two jsons into a unified one.",
+  "main": "cljs-merge.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest ./*.test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boraseoksoon/cljs-merge"
+  },
+  "keywords": [
+		"json",
+		"merge",
+		"clojurescript",
+    "clojure",
+    "deep-merge",
+    "deep",
+    "replace",
+    "compare",
+		"null",
+		"undefined",
+		"combine", 
+		"object",
+		"two objects",
+		"javascript", 
+		"Javascript"
+  ],
+  "author": "Jang seoksoon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boraseoksoon/cljs-merge/issues"
+  },
+  "homepage": "https://github.com/boraseoksoon/cljs-merge#readme",
+  "devDependencies": {
+		"shadow-cljs": "^2.11.4",
+    "jest": "^26.4.2"
+  }
 }
