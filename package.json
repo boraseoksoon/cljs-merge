@@ -1,6 +1,6 @@
 {
   "name": "cljs-merge",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "'cljs-merge' recursively merges two jsons into a unified one.",
   "main": "cljs-merge.js",
   "scripts": {

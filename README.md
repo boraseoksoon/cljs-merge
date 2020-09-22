@@ -87,7 +87,7 @@ $ npm install cljs-merge
 CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cljs-merge@1.0.1/cljs-merge.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cljs-merge@1.0.3/cljs-merge.js"></script>
 
 <script>
 const cljs = require("cljs-merge")
