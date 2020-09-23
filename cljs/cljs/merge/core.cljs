@@ -1,4 +1,4 @@
-(ns web.core.fn)
+(ns cljs.merge.core)
 
 (defn ^:export merge [json unless]
   (defn clean-map [m]

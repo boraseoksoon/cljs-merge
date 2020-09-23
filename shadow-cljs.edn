@@ -13,6 +13,17 @@
  {:node {:target :node-library
          :output-to "cljs_dist/node/index.js"
          :exports {:merge node.core.fn/merge}}
+
   :web {:target :browser
-        :output-to "cljs_dist/web/index.js"
-        :exports {:merge web.core.fn/merge}}}}
+        :output-dir "cljs_dist/web"
+        :asset-path "/js"
+        :modules {:cljs {:entries [web.core.fn]}}}
+  
+  :node-core {:target :node-library
+              :output-to "cljs_dist/core/node/index.js"
+              :exports {:merge cljs.merge.core/merge}}
+
+  :node-web {:target :browser
+             :output-dir "cljs_dist/core/web"
+             :asset-path "/js"
+             :modules {:cljs {:entries [cljs.merge.core]}}}}}

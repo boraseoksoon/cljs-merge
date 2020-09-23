@@ -5,15 +5,14 @@
 
 
 ```javascript
-const { merge } = require("cljs-merge")
+const { merge } = require('cljs-merge')
 
 const js1 = { k1: "v1", k2: "v2", k3: "v3" }
 const js2 = { k1: "v1", k2: undefined, k4: "v4", k5: "v5", k6: null }
 
 const res = merge({src:js1, target: js2})
-
-console.log(res);
-// { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
+console.log("res ==> ", res);
+// res ==> { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
 ```
 
 ```javascript
@@ -31,6 +30,7 @@ const js1 = {
 	},
 	special: "BORA"
 }
+
 const js2 = {	
 	key1: "10",
 	key3: null,
@@ -46,8 +46,8 @@ const js2 = {
 
 const res = merge({src:js1, target:js2})
 
-console.log(res) 
-// res => 
+console.log("res ==> ", res);
+// res ==> 
 // {	
 // 	key1: "10",
 // 	key2: "2",
@@ -87,18 +87,70 @@ $ npm install cljs-merge
 CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/cljs-merge@1.0.3/cljs-merge.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/cljs-merge@1.1.1/cljs_dist/core/web/cljs.js"></script>
+	<script>
+		const { merge } = cljs.merge.core
+		
+		const js1 = {
+			k1: "v1",
+			k2: "v2",
+			k3: "v3"
+		}
+	
+		const js2 = {
+			k1: "v1",
+			k2: undefined,
+			k4: "v4",
+			k5: "v5",
+			k6: null
+		}
+	
+		const res = merge({
+			src: js1,
+			target: js2
+		})
+		console.log("res ==> ", res);
+		// res ==> { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
+```
 
-<script>
-const cljs = require("cljs-merge")
-
-const js1 = { k1: "v1", k2: "v2", k3: "v3" }
-const js2 = { k1: "v1", k2: undefined, k4: "v4", k5: "v5", k6: null }
-
-const res = cljs.merge({src:js1, target: js2})
-console.log(res);
-// { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
-</script>
+```html
+	<script src="https://cdn.jsdelivr.net/npm/cljs-merge@1.1.1/cljs_dist/core/web/cljs.js"></script>
+	<script>
+		const { merge } = cljs.merge.core
+		
+		const js1 = {
+			k1: "v1",
+			k2: "v2",
+			k3: "v3"
+		}
+	
+		const js2 = {
+			k1: "v1",
+			k2: undefined,
+			k4: "v4",
+			k5: "v5",
+			k6: null
+		}
+	
+		const res = merge({
+			src: js1,
+			target: js2
+		})
+		console.log("res ==> ", res);
+		// res ==> { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
+	</script>
 ```
 
 ## Contributing
