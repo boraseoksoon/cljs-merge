@@ -1,5 +1,5 @@
 ## cljs-merge
-'cljs-merge' recursively merges two jsons into a unified one.
+'cljs-merge' recursively merges two jsons into a unified one, excluding null or undefined.
 
 [![NPM Version][npm-image]][npm-url]
 
