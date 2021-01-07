@@ -18,7 +18,7 @@ console.log("res ==> ", res);
 ```javascript
 const { merge } = require("cljs-merge")
 
-const js1 = {	
+const src = {	
 	key1: "1",
 	key2: "2",
 	key3: "3",
@@ -31,7 +31,7 @@ const js1 = {
 	special: "BORA"
 }
 
-const js2 = {	
+const target = {	
 	key1: "10",
 	key3: null,
 	key4: "40",
@@ -44,7 +44,7 @@ const js2 = {
 	quit: -1
 }
 
-const res = merge({ src:js1, target:js2 })
+const res = merge({ src, target })
 
 console.log("res ==> ", res);
 // res ==> 
@@ -97,13 +97,13 @@ CDN
 	<script>
 		const { merge } = cljs.merge.core
 		
-		const js1 = {
+		const src = {
 			k1: "v1",
 			k2: "v2",
 			k3: "v3"
 		}
 	
-		const js2 = {
+		const target = {
 			k1: "v1",
 			k2: undefined,
 			k4: "v4",
@@ -111,10 +111,8 @@ CDN
 			k6: null
 		}
 	
-		const res = merge({
-			src: js1,
-			target: js2
-		})
+		const res = merge({ src, target })
+		
 		console.log("res ==> ", res);
 		// res ==> { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
 	</script>
@@ -130,13 +128,13 @@ CDN
 	<script>
 		const { merge } = cljs.merge.core
 		
-		const js1 = {
+		const src = {
 			k1: "v1",
 			k2: "v2",
 			k3: "v3"
 		}
 	
-		const js2 = {
+		const target = {
 			k1: "v1",
 			k2: undefined,
 			k4: "v4",
@@ -144,10 +142,8 @@ CDN
 			k6: null
 		}
 	
-		const res = merge({
-			src: js1,
-			target: js2
-		})
+		const res = merge({ src, target })
+		
 		console.log("res ==> ", res);
 		// res ==> { k1: 'v1', k2: 'v2', k3: 'v3', k4: 'v4', k5: 'v5' }
 	</script>
